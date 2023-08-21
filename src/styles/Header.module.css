@@ -1,30 +1,42 @@
-/* Header.module.css */
+/* src/styles/Header.module.css */
 
 .header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .navList {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navItem {
-    font-size: 18px;
-  }
-  
-  .navItem a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .logo {
-    font-size: 24px;
-  }
-  
+  background-color: #d2e4f4;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-right: 10px;
+  width: 100px;
+}
+
+.siteName {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  margin-right: 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.cart {
+  color: #333;
+  text-decoration: none;
+  margin-left: auto;
+}
