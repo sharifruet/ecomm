@@ -1,42 +1,23 @@
-/* src/styles/Header.module.css */
+/* Header.module.css */
 
 .header {
-  background-color: #d2e4f4;
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  /* Your header styles here */
 }
 
-.logo {
+.companyName {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  /* Your navigation container styles here */
+}
+
+.logo img{
   margin-right: 10px;
   width: 100px;
 }
 
-.siteName {
-  font-size: 1.5rem;
-  margin-right: 10px;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav a {
-  margin-right: 20px;
-  color: #333;
-  text-decoration: none;
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.cart {
-  color: #333;
-  text-decoration: none;
-  margin-left: auto;
-}
