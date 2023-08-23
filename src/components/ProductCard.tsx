@@ -4,11 +4,14 @@ import React from 'react';
 import styles from '../styles/ProductCard.module.css';
 
 interface Product {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  image: string;
+  componentId: number;
+  itemName: string;
+  af1: {
+    authorName: string,
+    publisherName: string
+  };
+  salePrice: number;
+  photo: string;
 }
 
 interface ProductCardProps {
@@ -18,10 +21,13 @@ interface ProductCardProps {
 function ProductCard({ product }: ProductCardProps) {
   return (
     <div className={styles.productCard}>
-      <img src={product.image} alt={product.title} />
-      <h3>{product.title}</h3>
-      <p>{product.description}</p>
-      <p>Price: ${product.price.toFixed(2)}</p>
+      <img src={"images/"+product.photo} alt={product.photo} />
+      <h5>{product.itemName}</h5>
+      <p>
+        {product.af1.authorName}<br/>
+        {product.af1.publisherName}
+      </p>
+      <p>মূল্য: ৳ {product.salePrice.toFixed(2)}</p>
     </div>
   );
 }

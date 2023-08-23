@@ -3,48 +3,30 @@
 import React from 'react';
 
 interface Product {
-  id: number;
-  title: string;
+  componentId: number;
+  itemName: string;
   description: string;
-  price: number;
-  image: string;
+  salePrice: number;
+  photo: string;
 }
 
-interface ProductDetailsProps {
-  productId: string | string[] | undefined;
+interface ProductCardProps {
+  product: Product; // Specify the type for the 'product' prop
 }
 
-const products: Product[] = [
-  {
-    id: 1,
-    title: 'The Great Gatsby',
-    description: 'A classic novel by F. Scott Fitzgerald.',
-    price: 12.99,
-    image: '/images/great_gatsby.jpg',
-  },
-  {
-    id: 2,
-    title: 'To Kill a Mockingbird',
-    description: 'Harper Lee\'s renowned novel about racial injustice.',
-    price: 10.99,
-    image: '/images/to_kill_a_mockingbird.jpg',
-  },
-  // Add more product entries as needed
-];
+function ProductDetails({ product } : ProductCardProps) {
+  //const selectedProduct = products.find(product => product.id === Number(productId));
 
-function ProductDetails({ productId }: ProductDetailsProps) {
-  const selectedProduct = products.find(product => product.id === Number(productId));
-
-  if (!selectedProduct) {
+  if (!product) {
     return <div>Product not found</div>;
   }
 
   return (
     <div>
-      <h2>{selectedProduct.title}</h2>
-      <p>{selectedProduct.description}</p>
-      <p>Price: ${selectedProduct.price.toFixed(2)}</p>
-      <img src={selectedProduct.image} alt={selectedProduct.title} />
+      <h2>{product.itemName}</h2>
+      <p>{product.description}</p>
+      <p>মূল্য: ৳{product.salePrice.toFixed(2)}</p>
+      <img src={product.photo} alt={product.itemName} />
     </div>
   );
 }
